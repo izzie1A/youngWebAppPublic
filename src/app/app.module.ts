@@ -21,13 +21,13 @@ import { OurProjectComponent } from './slides/our-project/our-project.component'
 import { OurProjectCategoriesComponent } from './slides/our-project-categories/our-project-categories.component';
 import { OurProjectDetailComponent } from './slides/our-project-detail/our-project-detail.component';
 import { OurTeamComponent } from './slides/our-team/our-team.component';
-import { OurClinetComponent } from './slides/our-clinet/our-clinet.component';
 import { OurClientComponent } from './slides/our-client/our-client.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import { YungCertGallaryComponent } from './slides/yung-cert-gallary/yung-cert-gallary.component';
 
 @NgModule({
   declarations: [
@@ -49,8 +49,8 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     OurProjectCategoriesComponent,
     OurProjectDetailComponent,
     OurTeamComponent,
-    OurClinetComponent,
-    OurClientComponent
+    OurClientComponent,
+    YungCertGallaryComponent
   ],
   imports: [
     BrowserModule,

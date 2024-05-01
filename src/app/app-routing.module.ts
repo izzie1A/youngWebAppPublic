@@ -10,6 +10,7 @@ import { HomePageComponent } from './slides/home-page/home-page.component';
 import { OurProjectComponent } from './slides/our-project/our-project.component';
 import { OurProjectCategoriesComponent } from './slides/our-project-categories/our-project-categories.component';
 import { OurProjectDetailComponent } from './slides/our-project-detail/our-project-detail.component';
+import { YungCertGallaryComponent } from "./slides/yung-cert-gallary/yung-cert-gallary.component";
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: 'ourTeam', component: OurTeamComponent, data: { animation: 'ourTeam' }, },
   { path: 'ourClient', component: OurClientComponent, data: { animation: 'ourClient' }, },
   { path: 'contactUs', component: ContactUsComponent, data: { animation: 'contactUs' }, },
-  { path: '**', component: HomePageComponent }
+  { path: 'certificate', component: YungCertGallaryComponent,data: { animation: 'yg' }, },
+  // { path: '**', component: HomePageComponent }
 ];
 
 

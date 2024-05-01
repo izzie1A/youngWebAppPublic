@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FireabaseControlService } from './fireabase-control.service';
+import { FireabaseControlService } from './firebase-control.service';
 
 describe('FireabaseControlService', () => {
   let service: FireabaseControlService;

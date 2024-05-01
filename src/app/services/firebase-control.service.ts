@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class FireabaseControlService {
+export class FirebaseControlService {
   firestore: Firestore = inject(Firestore);
   private storage: Storage = inject(Storage);
 
@@ -52,6 +52,10 @@ export class FireabaseControlService {
       }
       return e
     }
+  }
+  getCollectionValueChange(address: string) {
+    const itemCollection = collection(this.firestore, address);
+    return collectionData(itemCollection) as Observable<any[]>
   }
 }
 

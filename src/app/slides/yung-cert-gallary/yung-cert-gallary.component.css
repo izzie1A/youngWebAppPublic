@@ -1,0 +1,45 @@
+.yungCertGallaryContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2%;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+}
+
+.yungCertGallaryContainer2 {
+    background-color: rgb(188, 214, 255);
+}
+
+.yungCertGallaryImage {
+    max-width: 100%;
+}
+
+.yungCertGallaryImageFrame {
+    background-color: var(--gray);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.yungCertGallaryButton {
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    background-color: black;
+    color: white;
+    font-size: var(--title);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yungCertGallaryButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.yungCertGallaryButton:active {
+    background-color: black;
+    color: black;
+}

@@ -1,0 +1,102 @@
+.ourClientHeaderImageContainer {
+    position: relative;
+  }
+  .ourClientContainer {
+    margin: 10%;
+  }
+  .ourClientHeader {
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .ourClientHeaderImage {
+    width: 100%;
+  }
+  
+  .ourClientHeaderIcon {
+    overflow: hidden;
+    width: 10vw;
+  }
+  
+  .ourClientHeaderTitle {
+    font-family: Cocogoose;
+    text-align: center;
+    color: white;
+  }
+  
+  .ourClientHeaderoverlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    right: 5%;
+    bottom: 5%;
+    height:100%;
+  }
+  
+  /*  */
+  
+  .ourClientArticels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1%;
+    padding: 1%;
+    justify-content: space-between;
+    align-items:stretch;
+    position: relative;
+  }
+  
+  .ourClientArticelsItem {
+    height: 100%;
+    margin:1vw;
+    margin-bottom:5vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ourClientArticelsItemTitle {
+    font-weight: bold;
+  }
+  
+  .ourClientArticelsItemImageFrame {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height:  50%;
+    width:  90%;
+    height: 40vw; 
+    background-color: var(--gray);
+  }
+  
+  .ourClientArticelsItemImage {
+    width: 100%;
+  }
+  
+  .ourClientArticelsItemImageIconFrame {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    right: 5%;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  .ourClientArticelsItemImageIcon{
+    width: 100%;
+  }
+  .ourClientPageControler{
+    display: flex;
+    padding-right: 5%;
+    padding-left: 5%;
+    align-items: center;
+    justify-content: space-around;
+  }

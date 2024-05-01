@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { StateService } from 'src/app/services/state.service';
-import { FireabaseControlService, firebaseObject} from "src/app/services/fireabase-control.service";
+import { FirebaseControlService, firebaseObject} from "src/app/services/firebase-control.service";
 
 @Component({
   selector: 'app-home-page',
@@ -11,7 +11,7 @@ import { FireabaseControlService, firebaseObject} from "src/app/services/fireaba
 export class HomePageComponent {
   homePageArray: any[] = [];
   xList: contactUsOffice[] = [];
-  constructor(public stateService: StateService, private fbs: FireabaseControlService) {
+  constructor(public stateService: StateService, private fbs: FirebaseControlService) {
     this.homePageArray = [
       this.ourTeamTextEN,
       this.ourTeamTextZH,
