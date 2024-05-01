@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "camera-af868": {
+      "hosting": {
+        "youngWebAppPublic": [
+          "youngbeta"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "camera-af868"
+  }
+}

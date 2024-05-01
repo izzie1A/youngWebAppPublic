@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "youngWebAppPublic",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

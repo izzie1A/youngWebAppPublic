@@ -1,0 +1,59 @@
+<div class="homepageContainer flexList ">
+    <div class="homepageContainerImageFrame itemCardPadding ">
+        <img class="homepageContainerImageOverlay"
+            src="https://firebasestorage.googleapis.com/v0/b/camera-af868.appspot.com/o/yungFolder%2F0material%2FhomepageTitleImg.png?alt=media&token=3a4a4fbb-5e37-4d87-b603-3ccbdd55928e">
+        <img class="homepageContainerImage"
+            src="https://firebasestorage.googleapis.com/v0/b/camera-af868.appspot.com/o/yungFolder%2F0material%2FPHOTO-2024-02-03-10-59-39.png?alt=media&token=fdd8be7b-1192-4a11-8561-c7102312240f">
+    </div>
+    <!-- homepageOurteam -->
+    <div class="homepageOurteam  ">
+        <div class="homepageOurteamContent">
+            <div class="itemCardPadding">
+                <a class=" itemCardValue  ">{{homePageArray[0]}} </a>
+                <br>
+                <br>
+                <a class=" itemCardValue  ">{{homePageArray[1]}} </a>
+            </div>
+            <div class="itemCardPadding ">
+                <img class="homepageOurteamimage "
+                    src="https://firebasestorage.googleapis.com/v0/b/camera-af868.appspot.com/o/yungFolder%2F0material%2FourTeam2.jpg?alt=media&token=911c409e-1fee-4693-8c70-1d624b4ea261">
+            </div>
+        </div>
+    </div>
+
+    <!-- ourProject -->
+    <div class="ourProject ">
+        <div class="homepageItemHeader flexCenter">
+        </div>
+        <div class="homepageOurteamContent">
+            <img class=" homepageOurteamimage itemCardPadding "
+                src="https://firebasestorage.googleapis.com/v0/b/camera-af868.appspot.com/o/yungFolder%2F0material%2Four%20project.jpg?alt=media&token=5c1c81df-62fe-44ef-9939-602d80b5a577">
+            <div class="itemCardPadding">
+                <a class=" itemCardValue  ">{{homePageArray[2]}} </a>
+                <br>
+                <br>
+                <a class=" itemCardValue  ">{{homePageArray[3]}} </a>
+                <br>
+                <br>
+                <a class=" itemCardValue  ">{{homePageArray[4]}} </a>
+
+            </div>
+        </div>
+
+        <div class="ourProjectImage"></div>
+        <div class="ourProjectText"></div>
+    </div>
+
+    <!-- contact us -->
+    <div class="contactUs flexList">
+        <div class="contactsUsItemList  itemCardPadding " [style]="'align-items: first baseline;'">
+            <div class="item itemCardMargin itemCardPadding" *ngFor="let x of contactsUsItemList">
+                <b class="itemCardContent itemValue"> {{x.egName}}</b>
+                <a class="itemCardValue itemValue "> {{x.englishAddress}} </a>
+                <a class="itemCardValue itemValue "> {{x.chineseAddress}} </a>
+                <a class="itemCardValue itemValue "> {{x.zhTelephone}} </a>
+                <a class="itemCardValue itemValue "> {{x.email}} </a>
+            </div>
+        </div>
+    </div>
+</div>
