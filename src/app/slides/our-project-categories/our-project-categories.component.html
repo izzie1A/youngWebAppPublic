@@ -1,1 +1,34 @@
-<p>our-project-categories works!</p>
+<!-- <app-image-viewer *ngIf="imageHolder!!||imageListHolder!!" [image]="imageHolder" [imageList]="imageListHolder"
+    (newItemEvent)="viewImageList($event)"></app-image-viewer> -->
+<div class="ourProjectDetailContainer">
+    <div class="ourProjectDetailHeader">
+    </div>
+    <div class="ourLayContainer">
+        <img class="ourLayImg" loading="lazy"
+            src="https://firebasestorage.googleapis.com/v0/b/camera-af868.appspot.com/o/yungFolder%2F0material%2FcompleteProject.jpg?alt=media&token=fef9390d-1512-429c-8f17-10305a40c07b">
+        <div class="ourLayDiv">
+            <img class="ourLayIcon"
+                src="https://firebasestorage.googleapis.com/v0/b/camera-af868.appspot.com/o/fuji%20logo%20ver2%203%20(green).png?alt=media&amp;token=13fa8018-5715-4f23-b8c9-4ffd5fd4a181">
+            <a class="ourLayTitle">
+                {{transformTitle(getCat())}}
+                in
+                {{getLocation(urlArray[urlArray.length - 2])}}
+                <!-- {{urlArray}} -->
+            </a>
+        </div>
+    </div>
+    <div class="ourProjectDetailItemList">
+        <div class="ourProjectDetailItem" *ngFor="let x of firebaseCollection2|async">
+            <div (click)="viewImageList(x.data.imageArray)" class="ourProjectDetailItemTitle itemButton  ">
+                <div class="flexList  ">
+                    <div class="ourProjectDetailImageFrame  ">
+                        <img loading="lazy" class="ourProjectDetailImage" src="{{x.data.imageArray[0]}}">
+                    </div>
+                    <b>
+                        {{x.data.name}}
+                    </b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

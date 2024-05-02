@@ -40,15 +40,15 @@ export class FirebaseControlService {
     const docRef = await doc(this.firestore, address, id);
     try {
       const doc = await getDocFromCache(docRef);
-      console.log("Cached document data:", doc.data());
+      // console.log("Cached document data:", doc.data());
       return doc
     } catch (e) {
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
-        console.log("Document data:", docSnap.data());
+        // console.log("Document data:", docSnap.data());
         return { id: docSnap.id, data: docSnap.data() };
       } else {
-        console.warn("No such document found");
+        // console.warn("No such document found");
       }
       return e
     }
