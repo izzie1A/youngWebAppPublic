@@ -40,6 +40,10 @@ export class OurProjectDetailComponent implements OnInit {
     const itemCollection = collection(this.firestore, this.getAddress);
     this.firebaseCollection = collectionData(itemCollection);
 
+    console.log(this.firebaseCollection)
+    this.firebaseCollection.subscribe((x)=>{
+      console.log(x)
+    })
     this.getTitle(this.getAddress);
     // this.t();
     this.getCatList();

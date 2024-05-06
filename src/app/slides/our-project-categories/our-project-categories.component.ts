@@ -15,7 +15,8 @@ export class OurProjectCategoriesComponent {
   firestore: Firestore = inject(Firestore);
 
   getAddress: any;
-  fbAddress: string = 'yungFolder/ourProject/' + this.router.url.split('/')[this.router.url.split('/').length - 2];;
+  fbAddress: string = 'yungFolder/ourProject/' + this.router.url.split('/')[this.router.url.split('/').length - 2];
+  // fbAddress: string = 'yungFolder/ourProject/' + this.router.url.split('/')[this.router.url.split('/').length -1];
 
   firestoreItemContainer: any;
   firebaseCollection2: any
@@ -36,18 +37,33 @@ export class OurProjectCategoriesComponent {
 
   urlArray = this.router.url.split('/');
 
+  firebaseCollection: Observable<any>
+
   constructor(private fbs: FirebaseControlService, private route: ActivatedRoute, public router: Router) {
+    let x = this.router.url.split('/')
     this.firebaseCollection2 = this.t();
+    this.getAddress = "yungFolder/ourProject/" + x[x.length - 1];
+    const itemCollection = collection(this.firestore, this.getAddress);
+    this.firebaseCollection = collectionData(itemCollection);
+    console.log(this.firebaseCollection)
   }
 
   async t() {
-    let result = await this.fbs.queryCondition(this.fbAddress, 200, "calgary", "==", this.getCat(), 'calgary');
-    console.log(this.fbAddress,this.getCat());
-    console.log(result);
+    console.warn(this.getCat());
+    console.warn(this.fbAddress);
+    console.warn(this.router.url.split('/')[this.router.url.split('/').length - 1]);
+    let a = this.router.url.split('/')[this.router.url.split('/').length - 1];
+    let b = this.fbAddress;
+    let c = this.getCat();
+    console.error(a, b, c);
+    // let result = await this.fbs.queryCondition(this.fbAddress, 200, "calgary", "==", this.getCat(), 'calgary');
+    let result = await this.fbs.queryCondition(this.fbAddress, 200, "calgary", "==", 'hotel', 'calgary');
+    console.log(this.fbAddress, this.getCat());
+    console.warn(result);
     return result
   }
 
-  
+
   getLocation(address: string) {
     const myArray: string[] = address.split('/');
     const capArray: string[] = myArray[myArray.length - 1].split(/(?=[A-Z])/);
@@ -77,9 +93,9 @@ export class OurProjectCategoriesComponent {
     const myArray: string[] = this.router.url.split('/');
     // let result = myArray[myArray.length - 1].toString();
     let result = myArray[myArray.length - 2];
-    console.log(result)
     result = this.transformString(result);
-    return result.toLowerCase();
+    result = result.toLowerCase();
+    return result;
   }
   // current
   getTitle(address: string) {
