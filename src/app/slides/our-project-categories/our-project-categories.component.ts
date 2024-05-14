@@ -57,11 +57,18 @@ export class OurProjectCategoriesComponent {
     let c = this.getCat();
     console.error(a, b, c);
     // let result = await this.fbs.queryCondition(this.fbAddress, 200, "calgary", "==", this.getCat(), 'calgary');
-    let result = await this.fbs.queryCondition(this.fbAddress, 200, "calgary", "==", 'hotel', 'calgary');
+    let result = await this.fbs.queryCondition(this.fbAddress, 200, "calgary", "==", a, 'calgary');
     console.log(this.fbAddress, this.getCat());
     console.warn(result);
     return result
   }
+  capitalizeFirstLetter(str: string): string {
+    if (str.length === 0) {
+        return str; // Return empty string if input is empty
+    }
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 
 
   getLocation(address: string) {
@@ -92,7 +99,7 @@ export class OurProjectCategoriesComponent {
   getCat(): string {
     const myArray: string[] = this.router.url.split('/');
     // let result = myArray[myArray.length - 1].toString();
-    let result = myArray[myArray.length - 2];
+    let result = myArray[myArray.length - 1];
     result = this.transformString(result);
     result = result.toLowerCase();
     return result;
